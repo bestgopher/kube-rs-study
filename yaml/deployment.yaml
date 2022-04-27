@@ -1,0 +1,21 @@
+apiVersion:  apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: podmanager-controller
+  template:
+    metadata:
+      labels:
+        app: podmanager-controller
+    spec:
+      containers:
+      - name: controller
+        image: bestgopher/podmanager-controller:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+

@@ -1,5 +1,4 @@
-use std::time::Duration;
-use std::{collections::BTreeMap, sync::Arc};
+use std::{collections::BTreeMap, sync::Arc, time::Duration};
 
 use k8s_openapi::{
     api::core::v1::{Pod, PodSpec},

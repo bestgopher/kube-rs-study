@@ -1,0 +1,14 @@
+apiVersion: bestgopher.com/v1
+kind: PodManager 
+metadata:
+  name: pod-manager-test1
+spec:
+  template:
+    containers:
+    - args:
+      - /bin/sh
+      - -c
+      - date; echo Hello from the Kubernetes cluster; echo $?
+      image: busybox
+      imagePullPolicy: IfNotPresent
+      name: hello
